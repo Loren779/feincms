@@ -11,22 +11,24 @@ keep: keep entry in content type dropdown (defaults to false)
 var CONTENT_TYPE_BUTTONS = [
     {
         type: 'richtextcontent',
+        cssclass: 'fa-pencil',
         keep: true
     }, {
         type: 'imagecontent',
+        cssclass: 'fa-file-image-o',
         keep: true
     }, {
         type: 'filecontent',
-        keep: true,
-        cssclass: 'pdfcontent'
+        cssclass: 'fa-file-pdf-o',
+        keep: true
     }, {
         type: 'filerimagecontent',
-        keep: true,
-        cssclass: 'imagecontent'
+        cssclass: 'fa-file-image-o',
+        keep: true
     }, {
         type: 'filerfilecontent',
-        keep: true,
-        cssclass: 'pdfcontent'
+        cssclass: 'fa-file-pdf-o',
+        keep: true
     }, {
         type: 'videocontent',
         keep: true,
@@ -34,26 +36,27 @@ var CONTENT_TYPE_BUTTONS = [
 {% if media_library_url %}
     }, {
         type: 'mediafilecontent',
+        cssclass: 'fa-file-image-o',
         keep: true,
-        cssclass: 'imagecontent',
         raw_id_picker: '{{ media_library_url }}?type__exact=image&_popup=1'
     }, {
         type: 'gallerycontent',
         keep: true
     }, {
         type: 'mediafilecontent',
+        cssclass: 'fa-file-pdf-o',
         keep: true,
-        cssclass: 'pdfcontent',
         raw_id_picker: '{{ media_library_url }}?type__exact=pdf&_popup=1'
 {% endif %}
     }, {
         type: 'oembedcontent',
+        cssclass: 'fa-file-video-o',
         keep: true
 {% if media_library_url %}
     }, {
         type: 'mediafilecontent',
+        cssclass: 'fa-file-audio-o',
         keep: true,
-        cssclass: 'audiocontent',
         raw_id_picker: '{{ media_library_url }}?type__exact=audio&_popup=1'
 {% endif %}
     }

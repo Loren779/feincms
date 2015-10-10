@@ -285,7 +285,7 @@ if (!Array.prototype.indexOf) {
                 if (!$option.length)
                     continue;
 
-                var $button = $('<a href="#" class="actionbutton" />');
+                var $button = $('<a href="#" class="fa" />');
                 $button.attr('title', CONTENT_NAMES[c.type]);
 
                 $button.addClass(c.cssclass ? c.cssclass : c.type).bind('click', (function(c) {
